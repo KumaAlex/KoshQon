@@ -2,6 +2,7 @@
 
 #app {
   font-weight: normal;
+  white-space: pre-line;
 }
 
 @media (hover: hover) {

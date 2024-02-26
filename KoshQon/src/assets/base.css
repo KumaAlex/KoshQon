@@ -1,3 +1,6 @@
+.gray {
+  color: #939292;
+}
 
 *,
 *::before,
@@ -8,7 +11,7 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #F5F5F5;
   min-height: 100vh;
   transition:
     color 0.5s,
