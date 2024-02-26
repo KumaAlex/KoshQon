@@ -4,12 +4,6 @@
       <NavCardComp :data="card" />
     </div>
   </div>
-  <div class="midInfo">
-
-  </div>
-  <div class="botInfo">
-
-  </div>
 </template>
 
 <script>
