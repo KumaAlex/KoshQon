@@ -16,7 +16,6 @@ export default {
       cards: [
         {
           title: "My announcement",
-          // img_url: "GirlAnnouncement.jpg",
           img_url: "GirlAnnouncement.jpg",
           link: ""
         },{
