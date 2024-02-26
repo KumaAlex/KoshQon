@@ -1,0 +1,23 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-right: 4rem;
+  &__decl {
+    background-color: #00c7aa;
+    color: whitesmoke;
+    border: none;
+    width: max-content;
+    padding: 10px;
+    font-size: 20px;
+    height: 40px;
+  }
+  &__profile {
+    background-color: transparent;
+    color: #00c7aa;
+    border: 2px solid #00c7aa;
+    font-size: 20px;
+    padding: 10px;
+    height: 40px;
+  }
+}
