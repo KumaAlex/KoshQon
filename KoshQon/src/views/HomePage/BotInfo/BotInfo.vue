@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped src="./MidCardComp.scss">
+<style lang="scss" scoped src="./BotInfo.scss">
 
 </style>
