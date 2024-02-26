@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+
+  &__img {
+  }
+  &__name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &-top{
+      font-size: 26px;
+      font-weight: 700;
+    }
+    &-bot{
+      font-size: 16px;
+      font-weight: 400;
+      color: gray;
+    }
+  }
+}
