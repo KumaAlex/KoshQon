@@ -1,12 +1,18 @@
 <template>
-  <div>
-
+  <div class="card">
+    <component class="card__img" :is="data.img_svg" />
+    <p class="card__text gray">
+      {{ data.text }}
+    </p>
   </div>
 </template>
 
 <script>
-export default {
 
+export default {
+  props: {
+    data: {},
+  }
 }
 </script>
 

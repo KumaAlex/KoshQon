@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  border: 1px solid red;
+  background: url("src/components/icons/HeaderBackGround.jpg")
+              center
+              no-repeat;
+  background-size: cover;
+  &::before {
+    transform: scaleX(-1);
+  }
 }

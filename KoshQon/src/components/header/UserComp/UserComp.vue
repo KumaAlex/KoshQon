@@ -1,11 +1,11 @@
 <template>
   <div class="user">
-    <button class="user__decl">
-      Make a declaration
-    </button>
-    <button class="user__profile">
+    <router-link to="announcement" class="user__announcement btn">
+      Announcement
+    </router-link>
+    <router-link to="login" class="user__profile btn">
       LOGIN
-    </button>
+    </router-link>
   </div>
 </template>
 
