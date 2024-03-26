@@ -16,6 +16,13 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.btn {
+  transition: .1s ease-in-out;
+  &:active {
+    transform: translate(0, -4px);
+  }
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
