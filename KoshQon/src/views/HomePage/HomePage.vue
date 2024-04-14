@@ -7,13 +7,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts" setup>
 import NavComp from "@/views/HomePage/Navigation/NavComp.vue";
 import MidInfo from "@/views/HomePage/MidInfo/MidInfo.vue";
 import BotInfo from "@/views/HomePage/BotInfo/BotInfo.vue";
-export default {
-  components: {NavComp, MidInfo, BotInfo}
-}
 </script>
 
 <style lang="scss" scoped src="./HomePage.scss">

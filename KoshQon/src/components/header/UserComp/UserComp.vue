@@ -1,17 +1,27 @@
 <template>
   <div class="user">
-    <router-link to="announcement" class="user__announcement btn">
-      Announcement
+    <router-link to="new_announcement" class="user__announcement btn">
+      New Announcement
     </router-link>
-    <router-link to="login" class="user__profile btn">
+    <router-link v-if="!profile.isLogged" to="login" class="user__profile btn">
       LOGIN
+    </router-link>
+    <router-link  v-if="profile.isLogged" to="profile" class="user__profile btn">
+      PROFILE
     </router-link>
   </div>
 </template>
 
 <script>
-export default {
+import {useProfileStore} from "@/stores/profile.ts";
 
+export default {
+  data() {
+    const profile = useProfileStore();
+    return {
+      profile
+    }
+  }
 }
 </script>
 

@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import MidCardComp from "@/views/HomePage/MidInfo/MidCardComp/MidCardComp.vue";
 
 export default {
