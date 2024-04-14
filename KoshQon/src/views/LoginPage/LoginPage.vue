@@ -17,7 +17,7 @@
         Forgot password?
       </a>
       <div class="login__left-bot">
-        <button class="login__btn orangeB white">Login now</button>
+        <button class="login__btn orangeB white" @click="profile.login()">Login now</button>
         <div class="login__dash">
           <div class="login__dash-left"></div>
           <div class="login__dash-center">or</div>
@@ -34,14 +34,21 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import LetterIcon from "@/components/icons/LoginIcons/LetterIcon.vue";
 import LoginBack from "@/components/icons/LoginIcons/LoginBack.vue";
 import PhoneIcon from "@/components/icons/LoginIcons/PhoneIcon.vue";
 import LockIcon from "@/components/icons/LoginIcons/LockIcon.vue";
+import {useProfileStore} from "@/stores/profile.ts";
 
 export default {
   components: {LetterIcon, LoginBack, PhoneIcon, LockIcon},
+  data() {
+    const profile = useProfileStore();
+    return {
+      profile
+    }
+  }
 }
 </script>
 

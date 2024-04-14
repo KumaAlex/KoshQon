@@ -57,7 +57,7 @@
       </div>
 
       <div class="login__left-bot">
-        <button class="login__btn orangeB white">Register now</button>
+        <button class="login__btn orangeB white" @click="profile.login()">Register now</button>
         <div class="login__dash">
           <div class="login__dash-left"></div>
           <div class="login__dash-center">or</div>
@@ -75,14 +75,18 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import LoginBack from "@/components/icons/LoginIcons/LoginBack.vue";
+import {useProfileStore} from "@/stores/profile.ts";
 
 export default {
   components: {LoginBack},
   data() {
+    const profile = useProfileStore();
+    const code = ['', '', '', ''];
     return {
-      code: ['', '', '', '']
+      code,
+      profile
     }
   },
   methods: {
