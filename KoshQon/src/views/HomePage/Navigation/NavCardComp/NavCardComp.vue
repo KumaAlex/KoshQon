@@ -1,5 +1,5 @@
 <template>
-  <a class="card" :href=data.link>
+  <a class="card" @click="route()">
     <img class="card__img" :src="'src/views/HomePage/icons/' + data.img_url" alt="">
     <div class="card__title">
       {{ data.title }}
@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import router from "@/router";
+
 export default {
   data() {
     return {
@@ -15,6 +17,11 @@ export default {
   },
   props: {
     data: {}
+  },
+  methods: {
+    route() {
+      router.push(this.data.link);
+    }
   }
 }
 </script>

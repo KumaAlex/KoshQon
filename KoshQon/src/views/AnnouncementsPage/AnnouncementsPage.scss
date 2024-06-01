@@ -1,0 +1,13 @@
+.ans {
+  display: flex;
+  flex-direction: row;
+
+  &__left {
+    width: 300px;
+  }
+
+  &__right {
+    padding: 20px 0;
+    background-image: url("https://kartinki.pics/uploads/posts/2021-01/thumbs/1611252011_10-p-svetlo-serii-fon-dlya-saita-11.jpg");
+  }
+}

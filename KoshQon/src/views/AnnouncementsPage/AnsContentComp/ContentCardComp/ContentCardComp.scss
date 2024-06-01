@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  background-color: #fffffa;
+  padding: 12px;
+  border: 1px solid yellowgreen;
+  border-radius: 10px;
+  &__img{
+    background-size: cover;
+    background-position: center;
+    height: 240px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+
+    &-like {
+      width: 50px;
+      height: 50px;
+    }
+    &-price {
+      padding: 2px 6px;
+      background-color: rgba(215, 107, 2, 0.77);
+      font-weight: bolder;
+    }
+  }
+
+  &__address{
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
+  &__author{
+    color: #cccccc;
+  }
+
+  &__description{
+    color: #5e5e5e;
+  }
+
+}

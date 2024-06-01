@@ -1,6 +1,10 @@
 <template>
-  <div>
+  <div class="app">
     <leftPanelComp />
+    <div class="app__qr">ANDROID
+    </div>
+    <div class="app__qr">IOS
+    </div>
   </div>
 </template>
 
@@ -8,6 +12,6 @@
 import leftPanelComp from "@/components/leftPanelComp/leftPanelComp.vue";
 </script>
 
-<style scoped>
+<style scoped src="./Mobile_AppsPage.scss">
 
 </style>

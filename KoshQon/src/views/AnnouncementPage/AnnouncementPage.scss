@@ -24,7 +24,8 @@
     align-items: center;
   }
   &__content {
-    background-color: rgb(224, 224, 224);
+    background: linear-gradient(to right, orange, #ea6e51);
+    //background-color: rgb(224, 224, 224);
     padding: 40px 0;
     border-radius: 30px;
     margin-bottom: 20px;

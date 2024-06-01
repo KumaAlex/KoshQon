@@ -6,8 +6,8 @@
         Register your account
       </h2>
       <div class="login__field">
-        <label for="number" class="login__name">Phone number</label>
-        <input type="tel" name="Phone Number" class="login__inp" pattern="[7-9]{1}[0-9]{9}">
+        <label class="login__name">Phone number</label>
+        <input type="tel" name="Phone Number" class="login__inp" pattern="[7-9]{1}[0-9]{9}" v-model="phone">
         <div class="login__code">
           <div class="code-input">
             <input type="number" class="login__code-num" v-model="code[0]" maxlength="1" @input="moveToNext($event, 0)" ref="input0" @click="clearInput($event)"/>
@@ -20,25 +20,25 @@
         </div>
       </div>
       <div class="login__field">
-        <label for="password" class="login__name">Password</label>
-        <input type="password" class="login__inp">
-        <input type="password" class="login__inp">
+        <label class="login__name">Password</label>
+        <input type="password" class="login__inp" v-model="password1">
+        <input type="password" class="login__inp" v-model="password2">
       </div>
 
       <div class="login__field-hor">
         <div class="login__field">
-          <label for="Name" class="login__name">Name</label>
-          <input type="text" name="Name" class="login__inp login__inp-hor">
+          <label class="login__name">Name</label>
+          <input type="text" name="Name" class="login__inp login__inp-hor" v-model="name">
         </div>
         <div class="login__field">
-          <label for="SurName" class="login__name">Surname</label>
-          <input type="text" name="SurName" class="login__inp login__inp-hor">
+          <label class="login__name">Surname</label>
+          <input type="text" name="SurName" class="login__inp login__inp-hor" v-model="surname">
         </div>
       </div>
       <div class="login__field-hor">
         <div class="login__field">
-          <label for="Gender" class="login__name">Gender</label>
-          <select name="Gender" class="login__inp login__inp-hor">
+          <label class="login__name">Gender</label>
+          <select name="Gender" class="login__inp login__inp-hor" v-model="gender">
             <option value="male" class="login__inp">male</option>
             <option value="female" class="login__inp">female</option>
             <option value="another gender" class="login__inp">another gender</option>
@@ -46,7 +46,7 @@
           </select>
         </div>
         <div class="login__field">
-          <label for="City" class="login__name">City</label>
+          <label class="login__name">City</label>
           <select name="City" class="login__inp login__inp-hor">
             <option value="Almaty" class="login__inp">Almaty</option>
             <option value="Astana" class="login__inp">Astana</option>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="login__left-bot">
-        <button class="login__btn orangeB white" @click="profile.login()">Register now</button>
+        <button class="login__btn orangeB white" @click="validate()">Register now</button>
         <div class="login__dash">
           <div class="login__dash-left"></div>
           <div class="login__dash-center">or</div>
@@ -75,21 +75,34 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import LoginBack from "@/components/icons/LoginIcons/LoginBack.vue";
-import {useProfileStore} from "@/stores/profile.ts";
+import {validateForm} from "@/services/register.ts";
 
 export default {
   components: {LoginBack},
   data() {
-    const profile = useProfileStore();
     const code = ['', '', '', ''];
+    let phone;
+    let password1;
+    let name;
+    let password2;
+    let surname;
+    let gender;
     return {
       code,
-      profile
+      phone,
+      password1,
+      password2,
+      name,
+      surname,
+      gender
     }
   },
   methods: {
+    validate() {
+      if (this.phone && this.password1 === this.password2 && this.name && this.surname) validateForm(this.phone, this.password1, this.name, this.surname, this.gender);
+    },
     moveToNext(event, index) {
       if (event.target.value.length === 1) {
         if (index < 3) {

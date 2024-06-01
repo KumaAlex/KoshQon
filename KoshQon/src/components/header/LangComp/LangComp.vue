@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       languages: ["ru", "en", "kz"],
-      cur_lan: ref("ru"),
+      cur_lan: ref("en"),
       cur_ind: ref(0),
     }
   },

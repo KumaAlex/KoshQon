@@ -17,19 +17,19 @@ export default {
         {
           title: "My announcement",
           img_url: "GirlAnnouncement.jpg",
-          link: ""
+          link: "/new_announcement"
         },{
           title: "Favorites",
           img_url: "Favorites.png",
-          link: ""
+          link: "/profile"
         },{
           title: "Messenger",
           img_url: "Messenger.jpg",
-          link: ""
+          link: "/chats"
         },{
           title: "Guide",
           img_url: "Guide.jpg",
-          link: ""
+          link: "/Terms_of_use"
         }
       ]
     };
