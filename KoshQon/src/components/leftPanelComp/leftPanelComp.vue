@@ -9,7 +9,7 @@
 <script lang="ts" setup>
   const categories = [
     {
-      name: 'User',
+      name: 'Profile',
       img: '',
       link: 'profile',
     },
@@ -27,11 +27,6 @@
       name: 'Mobile Apps',
       img: '',
       link: 'Mobile_Apps',
-    },
-    {
-      name: 'Social media',
-      img: '',
-      link: 'Social_media',
     },
     {
       name: 'Terms of use',

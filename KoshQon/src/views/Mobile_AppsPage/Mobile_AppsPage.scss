@@ -1,0 +1,18 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+
+  &__qr {
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    width: 500px;
+    height: 500px;
+    background-image: url("https://m.media-amazon.com/images/I/61oJQApbXkL.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

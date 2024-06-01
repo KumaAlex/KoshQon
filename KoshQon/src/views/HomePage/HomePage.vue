@@ -2,8 +2,8 @@
   <div class="home">
     <img class="home__topImg" src="@/views/HomePage/icons/TopImage.png" alt="TopImage">
     <NavComp />
-    <MidInfo />
-    <BotInfo />
+    <MidInfo class="animation" />
+    <BotInfo class="animation" />
   </div>
 </template>
 
@@ -11,6 +11,8 @@
 import NavComp from "@/views/HomePage/Navigation/NavComp.vue";
 import MidInfo from "@/views/HomePage/MidInfo/MidInfo.vue";
 import BotInfo from "@/views/HomePage/BotInfo/BotInfo.vue";
+
+
 </script>
 
 <style lang="scss" scoped src="./HomePage.scss">
